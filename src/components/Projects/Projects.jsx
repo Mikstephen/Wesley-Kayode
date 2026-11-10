@@ -3,27 +3,23 @@ import AnimatedSection from "../AnimatedSection/AnimatedSection";
 
 const sermons = [
   {
-    title: "Walking in Faith",
-    date: "June 1, 2025",
-    scripture: "Hebrews 11:1",
+    title: "THE REPAIRERS OF THE BREACH",
+    date: "Oct 17, 2026",
     videoId: "hV-U2gnHtqs",
   },
   {
-    title: "The Power of Prayer",
-    date: "June 8, 2025",
-    scripture: "Matthew 6:9-13",
+    title: "SONG OF YAHWEH",
+    date: "Sep 3, 2026",
     videoId: "0Xk-oouS_Uc",
   },
   {
-    title: "Grace & Redemption",
-    date: "June 15, 2025",
-    scripture: "Ephesians 2:8-9",
+    title: "SET US ON FIRE",
+    date: "Aug 26, 2026",
     videoId: "9ADQdJajRUQ",
   },
   {
-    title: "Living with Purpose",
-    date: "June 22, 2025",
-    scripture: "Jeremiah 29:11",
+    title: "CHANT OF BREAKTHROUGH",
+    date: "Sep 1, 2026",
     videoId: "kPlqQCRQp4s",
   },
 ];
