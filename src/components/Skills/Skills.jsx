@@ -5,44 +5,44 @@ function Skills() {
   const skillGroups = [
     {
       number: "01",
-      title: "Frontend",
-      skills: ["JavaScript", "React", "HTML", "CSS"],
+      title: "Preaching",
+      skills: ["Expository Preaching", "Evangelism", "Revival Meetings"],
     },
     {
       number: "02",
-      title: "Mobile Development",
-      skills: ["Flutter", "Dart", "Riverpod", "GoRouter"],
+      title: "Teaching & Discipleship",
+      skills: ["Bible Study", "Mentorship", "Youth Ministry"],
     },
     {
       number: "03",
-      title: "APIs & Tools",
-      skills: ["REST APIs", "Dio", "Firebase", "Git", "GitHub"],
+      title: "Pastoral Care",
+      skills: ["Counselling", "Prayer Ministry", "Family Ministry"],
     },
     {
       number: "04",
-      title: "Cloud",
-      skills: ["AWS"],
+      title: "Outreach",
+      skills: ["Community Service", "Missions", "Church Planting"],
     },
   ];
 
   return (
-    <section id="skills" className="skills">
+    <section id="ministry" className="skills">
       <AnimatedSection>
       <div className="skills-container">
 
         <div className="skills-heading">
-          <p className="section-label">SKILLS</p>
+          <p className="section-label">MINISTRY</p>
 
           <h2>
-            Technologies I use
+            Areas of
             <br />
-            to build.
+            ministry.
           </h2>
 
           <p className="skills-description">
-            A selection of technologies and tools I'm
-            learning and using to build web and mobile
-            applications.
+            A reflection of the key areas through which
+            Pastor Wesley Kayode Luther serves God's people
+            and advances the Kingdom.
           </p>
         </div>
 

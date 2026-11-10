@@ -7,7 +7,7 @@ function Loader() {
       <div className="loader-content">
         <img src={logo} alt="Stephen Lawal" />
 
-        <h2>Stephen<span>.</span></h2>
+        <h2>Wesley<span>.</span></h2>
 
         <div className="loader-bar">
           <div className="loader-progress"></div>

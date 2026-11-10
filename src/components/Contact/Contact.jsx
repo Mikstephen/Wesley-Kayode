@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./Contact.css";
 import AnimatedSection from "../AnimatedSection/AnimatedSection";
 import emailjs from "@emailjs/browser";
+import { MdEmail } from "react-icons/md";
+import { FaWhatsapp, FaInstagram, FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa";
 
 
 function Contact() {
@@ -16,14 +18,15 @@ function Contact() {
   setStatus("sending");
   try {
     await emailjs.send(
-      "service_w5u1gnl",
-      "template_5grlg8d",
+      "service_988k4k5",
+      "template_zbfem15",
       { from_name: form.name, from_email: form.email, message: form.message },
-      "yqGBxc5gHf2KMiPW2"
+      "OMlm37bjooq6anWdU"
     );
     setStatus("success");
     setForm({ name: "", email: "", message: "" });
-  } catch {
+  } catch (err) {
+    console.error("EmailJS error:", err);
     setStatus("error");
   }
 };
@@ -38,49 +41,35 @@ function Contact() {
           <p className="section-label">CONTACT</p>
 
           <h2>
-            Let's work
+            Let's connect
             <br />
-            together.
+            &amp; pray.
           </h2>
 
           <p className="contact-description">
-            Have a project, opportunity, or just want to
-            connect? Feel free to reach out.
+            Want to invite Pastor Wesley for a speaking engagement,
+            request counselling, or simply connect? Reach out below.
           </p>
 
           <div className="contact-links">
 
-            <a
-              href="https://wa.me/2349024338185?text=Hello%20Stephen,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>WhatsApp</span>
-              (234) 902-433-8185
+            <a href="https://wa.me/2347014470895" target="_blank" rel="noreferrer">
+              <FaWhatsapp /> (234) 701-447-0895
             </a>
-
-
-            <a href="mailto:mikforge@gmail.com">
-              <span>Email</span>
-              mikforge@gmail.com
+            <a href="mailto:revivaltrainministry@gmail.com">
+              <MdEmail /> revivaltrainministry@gmail.com
             </a>
-
-            <a
-              href="https://github.com/Mikstephen"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>GitHub</span>
-              Mikstephen
+            <a href="https://www.instagram.com/wesleykayode?exln=dW00MmRsa3RscmE5" target="_blank" rel="noreferrer">
+              <FaInstagram /> Wesley Kayode Luther
             </a>
-
-            <a
-              href="https://www.linkedin.com/in/lawal-stephen-oluwakorede-322a40262/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>LinkedIn</span>
-              LinkedIn Profile
+            <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+              <FaYoutube /> Pastor Wesley Kayode
+            </a>
+            <a href="https://www.tiktok.com/@wesleykayode?_r=1&_t=ZS-9BGpX0AJUWL" target="_blank" rel="noreferrer">
+              <FaTiktok /> Wesley Kayode Luther
+            </a>
+            <a href="https://www.facebook.com/share/14ycffJydGu/" target="_blank" rel="noreferrer">
+              <FaFacebook /> Pastor Wesley Kayode
             </a>
 
           </div>
@@ -117,7 +106,7 @@ function Contact() {
             <textarea
               id="message"
               rows="6"
-              placeholder="Tell me about your project..."
+              placeholder="Tell me about your request..."
               value={form.message}
               onChange={handleChange}
               required

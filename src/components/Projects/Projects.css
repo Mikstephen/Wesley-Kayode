@@ -33,183 +33,126 @@
   line-height: 1.7;
 }
 
-.projects-grid {
+/* ================================
+   SERMON GRID
+================================ */
+
+.sermons-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 28px;
 }
 
-.project-card {
-  background: var(--card-bg);
+.sermon-card {
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
+  background: var(--card-bg);
 
   opacity: 0;
   transform: translateY(35px);
-
-  transition:
-    transform 0.4s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-.animated-section-visible .project-card {
-  animation: projectCardReveal 0.7s ease forwards;
+.animated-section-visible .sermon-card {
+  animation: cardReveal 0.7s ease forwards;
   animation-delay: var(--delay);
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-
+.sermon-card:hover {
+  transform: translateY(-6px);
   border-color: #4f46e5;
-
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
-.project-number {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-
-  z-index: 2;
-
-  color: #6366f1;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.project-image-wrapper {
-  height: 300px;
+/* Thumbnail */
+.sermon-thumbnail {
   position: relative;
-
-  background: var(--card-img-bg);
-
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
   overflow: hidden;
 }
 
-.project-image {
+.sermon-thumbnail img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
 
+.sermon-thumbnail:hover img {
+  transform: scale(1.05);
+  opacity: 0.75;
+}
+
+.sermon-play {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-
-  overflow: hidden;
-  padding: 16px;
-  box-sizing: border-box;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+  pointer-events: none;
 }
 
-.project-image img {
-  width: 50%;
-  height: 100%;
-
-  object-fit: contain;
-  flex-shrink: 0;
-
-  animation: screenshotFade 0.6s ease;
+.sermon-thumbnail:hover .sermon-play {
+  transform: scale(1.15);
 }
 
-.project-card:hover .project-image img { transform: scale(1.03); }
+.sermon-info {
+  padding: 16px 20px 20px;
+}
 
-.project-number {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  color: var(--border-alt);
+.sermon-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.sermon-scripture {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1px;
+  color: #6366f1;
+  text-transform: uppercase;
 }
 
-.project-placeholder {
-  color: var(--border-alt);
-  font-size: 32px;
-  font-weight: 300;
-  letter-spacing: -2px;
-}
-
-.project-content { padding: 18px 22px 22px; }
-
-.project-content h3 {
-  color: var(--text);
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  letter-spacing: -0.3px;
-}
-
-.project-content > p {
-  color: var(--text-muted);
-  font-size: 13px;
-  line-height: 1.7;
-  margin-bottom: 18px;
-}
-
-.project-technologies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 20px;
-}
-
-.project-technologies span {
-  padding: 4px 12px;
-  background: transparent;
-  border: 1px solid var(--border-alt);
-  border-radius: 100px;
-  color: var(--text-muted);
+.sermon-date {
   font-size: 11px;
-  transition: color 0.3s ease, border-color 0.3s ease;
+  color: var(--text-faint);
 }
 
-.project-technologies span:hover { color: var(--text); border-color: var(--text); }
-
-.project-link {
-  color: var(--text);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-size: 13px;
+.sermon-info h3 {
+  font-size: 18px;
   font-weight: 500;
-  transition: opacity 0.3s ease;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  margin: 0;
 }
 
-.project-link:hover { opacity: 0.5; }
-
+/* ================================
+   RESPONSIVE
+================================ */
 
 @media (max-width: 800px) {
   .projects { padding: 90px 0; }
   .projects-header { flex-direction: column; align-items: flex-start; margin-bottom: 40px; }
-  .projects-grid { grid-template-columns: 1fr; }
+  .sermons-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 500px) {
   .projects-header h2 { letter-spacing: -1px; }
-  .project-image { height: 260px; }
-  .project-content { padding: 20px; }
 }
-@keyframes projectCardReveal {
-  from {
-    opacity: 0;
-    transform: translateY(35px);
-  }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes screenshotFade {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+@keyframes cardReveal {
+  from { opacity: 0; transform: translateY(35px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

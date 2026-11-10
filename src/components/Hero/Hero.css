@@ -144,38 +144,6 @@
 
 
 /* ================================
-   STATS
-================================ */
-
-.hero-stats {
-  display: flex;
-  align-items: flex-start;
-  gap: 70px;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.stat-number {
-  font-size: clamp(38px, 3.2vw, 48px);
-  line-height: 0.95;
-  font-weight: 300;
-  letter-spacing: -2px;
-  color: var(--text);
-}
-
-.stat-label {
-  font-size: 12px;
-  line-height: 1.2;
-  color: var(--text-muted);
-  font-weight: 400;
-}
-
-
-/* ================================
    HELLO
 ================================ */
 
@@ -275,9 +243,6 @@
   .sidebar-line { display: none; }
 
   .hero-body { width: 100%; height: calc(100svh - 55px); padding: 45px 24px 30px; justify-content: space-between; }
-  .hero-stats { gap: 35px; }
-  .stat-number { font-size: 34px; }
-  .stat-label { font-size: 10px; }
   .hero-heading { margin-top: auto; margin-bottom: 25px; }
   .hero-hello { font-size: clamp(82px, 23vw, 125px); letter-spacing: -5px; }
   .hero-sub { font-size: 12px; margin-top: 16px; }
@@ -292,7 +257,5 @@
 @media (max-width: 480px) {
   .hero-photo-wrap { top: 270px; height: 60svh; }
   .hero-body { padding-left: 18px; padding-right: 18px; }
-  .hero-stats { gap: 25px; }
-  .stat-number { font-size: 30px; }
   .hero-hello { font-size: 82px; letter-spacing: -4px; }
 }

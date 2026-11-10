@@ -17,13 +17,14 @@ function Navbar({ onToggleTheme, dark }) {
 
         <nav className="nav-links">
           <a href="#about">About Me</a>
-          <a href="#projects">Portfolio</a>
-          <a href="#skills">Services</a>
+          <a href="#sermons">Sermons</a>
+          <a href="#ministry">Ministry</a>
+          <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
         </nav>
 
         <a href="#contact" className="nav-button">
-          Book A Call ↗
+          Get in Touch ↗
         </a>
 
         <button className="theme-toggle" onClick={onToggleTheme} aria-label="Toggle theme">
@@ -44,10 +45,11 @@ function Navbar({ onToggleTheme, dark }) {
 
       <nav className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <a href="#about" onClick={closeMenu}>About Me</a>
-        <a href="#projects" onClick={closeMenu}>Portfolio</a>
-        <a href="#skills" onClick={closeMenu}>Services</a>
-        <a href="#contact" onClick={closeMenu}>Blog</a>
-        <a href="#contact" className="mobile-menu-button" onClick={closeMenu}>Book A Call ↗</a>
+        <a href="#sermons" onClick={closeMenu}>Sermons</a>
+        <a href="#ministry" onClick={closeMenu}>Ministry</a>
+        <a href="#gallery" onClick={closeMenu}>Gallery</a>
+        <a href="#contact" onClick={closeMenu}>Contact</a>
+        <a href="#contact" className="mobile-menu-button" onClick={closeMenu}>Book A Session ↗</a>
       </nav>
     </header>
   );

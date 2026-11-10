@@ -1,5 +1,5 @@
 import "./Hero.css";
-import photo from "../../../public/stephen.jpg";
+import photo from "../../assets/pastor.jpg"; // replace with pastor's photo
 
 function Hero() {
   return (
@@ -9,7 +9,7 @@ function Hero() {
       <div className="hero-photo-wrap">
         <img
           src={photo}
-          alt="Stephen Lawal"
+          alt="Pastor Wesley Kayode Luther"
           className="hero-photo"
         />
       </div>
@@ -19,7 +19,7 @@ function Hero() {
         {/* Vertical sidebar */}
         <aside className="hero-sidebar">
           <span className="sidebar-role">
-            App Developer
+            Pastor &amp; Speaker
           </span>
 
           <div className="sidebar-line"></div>
@@ -32,26 +32,7 @@ function Hero() {
         {/* Main content */}
         <div className="hero-body">
 
-          {/* Stats */}
-          <div className="hero-stats">
-
-            <div className="stat">
-              <span className="stat-number">+10</span>
-              <span className="stat-label">
-                Projects completed
-              </span>
-            </div>
-
-            <div className="stat">
-              <span className="stat-number">+3</span>
-              <span className="stat-label">
-                Apps shipped
-              </span>
-            </div>
-
-          </div>
-
-          {/* Main heading */}
+            {/* Main heading */}
           <div className="hero-heading">
 
             <h1 className="hero-hello">
@@ -59,14 +40,14 @@ function Hero() {
             </h1>
 
             <p className="hero-sub">
-              — It's Stephen, a frontend &amp; mobile developer
+              — I'm Pastor Wesley Kayode Luther, a preacher, teacher &amp; servant of God
             </p>
 
           </div>
 
-          {/* Scroll */}
-          <a href="#projects" className="hero-scroll">
-            Scroll down ↓
+          {/* CTA */}
+          <a href="#about" className="hero-scroll">
+            Learn more ↓
           </a>
 
         </div>
